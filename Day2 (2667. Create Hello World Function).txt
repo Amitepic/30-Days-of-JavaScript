@@ -1,0 +1,29 @@
+Day2
+
+
+2667. Create Hello World Function
+
+URL (https://leetcode.com/problems/create-hello-world-function/description/?envType=study-plan-v2&envId=30-days-of-javascript)
+
+
+
+Solution:
+
+/**
+ * @return {Function}
+ */
+var createHelloWorld = function() {
+    
+    return function(...args) {
+        return "Hello World"
+    }
+};
+
+/**
+ * const f = createHelloWorld();
+ * f(); // "Hello World"
+ */
+
+Approch : Simply return string "Hello World "
+
+Note:  In javscrip tyou can directly return the string "Hello World " and its return only this string and ignore the all arguments.
