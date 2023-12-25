@@ -1,0 +1,25 @@
+DAY5 (2635. Apply Transform Over Each Element in Array)
+
+
+URL(https://leetcode.com/problems/apply-transform-over-each-element-in-array/description/?envType=study-plan-v2&envId=30-days-of-javascript)
+
+
+SOlution:
+
+/**
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var map = function(arr, fn) {
+    let result = new Array;
+    for(let i=0; i<arr.length; i++){
+        result[i] =  fn(arr[i] ,i);
+
+    }
+    return result;
+};
+
+Approch :- Create a new array and traverse by for loop inside loop pass fn function is give and stored it in new array and return new array.
+
+Note : create new array then looped on arr pass inside the fn and stored in new array and reutn it.
