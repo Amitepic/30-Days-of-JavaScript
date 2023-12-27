@@ -1,0 +1,25 @@
+DAY7 (2626. Array Reduce Transformation)
+
+URL(https://leetcode.com/problems/array-reduce-transformation/description/?envType=study-plan-v2&envId=30-days-of-javascript)
+
+Solution:
+/**
+ * @param {number[]} nums
+ * @param {Function} fn
+ * @param {number} init
+ * @return {number}
+ */
+var reduce = function(nums, fn, init) {
+     let res = init;
+     for(let i=0; i<nums.length;i++){
+        if(nums.length != 0 ){
+            res = fn(res, nums[i]);
+        }
+
+     }
+     return res;
+};
+
+Approch :- make a varible that store init value traverse on nums arr and check condition and inside condtion pass res =  fn(res, nums[i]) and return res.
+
+Note :- store init value in varible and loop over nums arr check condition and pass the fn then return res.
