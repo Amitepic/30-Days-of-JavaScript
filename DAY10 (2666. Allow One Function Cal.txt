@@ -1,0 +1,33 @@
+DAY10 (2666. Allow One Function Call)
+
+URL(https://leetcode.com/problems/allow-one-function-call/description/?envType=study-plan-v2&envId=30-days-of-javascript)
+
+
+Solution: 
+
+/**
+ * @param {Function} fn
+ * @return {Function}
+ */
+var once = function(fn) {
+    let flag = false;
+    return function(...args){
+        if(!flag){
+            flag = true;
+            return fn(...args)
+        }else{
+            return undefined;
+        }
+    }
+};
+
+/**
+ * let fn = (a,b,c) => (a + b + c)
+ * let onceFn = once(fn)
+ *
+ * onceFn(1,2,3); // 6
+ * onceFn(2,3,6); // returns undefined without calling fn
+ */
+
+
+Note : create a flag varible and set it false and make condition if function return once(only one) then set flag as true and return args else return undefined.
