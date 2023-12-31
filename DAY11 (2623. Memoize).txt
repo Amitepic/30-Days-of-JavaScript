@@ -1,0 +1,36 @@
+DAY11 (2623. Memoize)
+
+URL(https://leetcode.com/problems/memoize/description/?envType=study-plan-v2&envId=30-days-of-javascript)
+
+Solution :
+/**
+ * @param {Function} fn
+ * @return {Function}
+ */
+function memoize(fn) {
+    const cachedValue = {};
+    return function(...args) {
+       if(args in cachedValue){
+          return cachedValue[args]
+       } 
+       cachedValue[args] = fn(...args)
+       return cachedValue[args];
+    }
+
+}
+
+
+/** 
+ * let callCount = 0;
+ * const memoizedFn = memoize(function (a, b) {
+ *	 callCount += 1;
+ *   return a + b;
+ * })
+ * memoizedFn(2, 3) // 5
+ * memoizedFn(2, 3) // 5
+ * console.log(callCount) // 1 
+ */
+
+approach : make a varible that store the calculated value with key value pair and check condition if it is present then return value esle calculate and return.
+
+in this we using map for key:value pair.
